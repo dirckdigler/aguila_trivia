@@ -3,6 +3,8 @@
 namespace Drupal\aguila_beer_per_view\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\aguila_beer_per_view\Ajax\AguilaBeerPerViewCommand;
+use Drupal\Core\Ajax\AjaxResponse;
 
 /**
  * An example controlDrupal\Core\Field\FieldItemListler.
@@ -42,11 +44,13 @@ class AguilaBeerPerViewTrivia extends ControllerBase {
           $paragraph->get('field_question')->value : NULL;
         $correct_answers = !empty($paragraph->get('field_correct_answers')) ?
           $paragraph->get('field_correct_answers')->value : NULL;
+        $url_controller = '/aguila_beer_per_view/qualify/testing';
         $results = [
           'question' => $question,
           'multiple_options' => $multiple_answers,
           'correct_answers' => $correct_answers,
           'counter' => 1,
+          'url' => $url_controller,
         ];
       }
     }
@@ -56,6 +60,12 @@ class AguilaBeerPerViewTrivia extends ControllerBase {
       '#content' => $results,
     ];
 
+  }
+
+  public function qualify($token) {
+    $response = new AjaxResponse();
+    $response->addCommand(new AguilaBeerPerViewCommand($token));
+    return $response;
   }
 
 }

@@ -17,7 +17,7 @@ function aguila_beer_per_view_help($route_name, RouteMatchInterface $route_match
     case 'help.page.aguila_beer_per_view':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      $output .= '<p>' . t('Manage Answers and Questions about the Trivia') . '</p>';
       return $output;
 
     default:
@@ -35,4 +35,11 @@ function aguila_beer_per_view_theme($existing, $type, $theme, $path) {
       ],
     ],
   ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function aguila_beer_per_view_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'aguila_beer_per_view/aguila-beer-per-view';
 }

@@ -22,7 +22,9 @@
   {% endif %}
   {% if content.multiple_options %}
     {% for option in content.multiple_options %}
-      <div class="option">{{ option }}</div>
+      <a href="{{ content.url }}">
+        <div class="option">{{ option }}</div>
+      </a>
     {% endfor %}
   {% endif %}
   <button class="btn next-question">{{ 'siguiente'|upper }}</button>

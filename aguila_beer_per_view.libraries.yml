@@ -1,0 +1,5 @@
+aguila_beer_per_view:
+ js:
+   js/aguila_beer_per_view.js: {}
+ dependencies:
+   - core/drupal.ajax

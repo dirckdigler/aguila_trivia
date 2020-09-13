@@ -5,3 +5,9 @@ aguila_beer_per_view.content:
   requirements: 
     _permission: 'access content' 
 
+aguila_beer_per_view.qualify:
+  path: 'aguila_beer_per_view/qualify/{token}'
+  defaults:
+    _controller: '\Drupal\aguila_beer_per_view\Controller\AguilaBeerPerViewTrivia::qualify'
+  requirements:
+    _permission: 'access content'
