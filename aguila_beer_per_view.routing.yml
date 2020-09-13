@@ -1,7 +1,7 @@
 aguila_beer_per_view.content:
   path: '/quizz' 
   defaults: 
-    _controller: '\Drupal\aguila_beer_per_view\Controller\AguilaBeerPerBeerQuizz::content' 
+    _controller: '\Drupal\aguila_beer_per_view\Controller\AguilaBeerPerViewTrivia::content' 
   requirements: 
     _permission: 'access content' 
 

@@ -7,7 +7,7 @@ use Drupal\Core\Controller\ControllerBase;
 /**
  * An example controlDrupal\Core\Field\FieldItemListler.
  */
-class AguilaBeerPerBeerTrivia extends ControllerBase {
+class AguilaBeerPerViewTrivia extends ControllerBase {
 
   /**
    * Returns a render-able array for a test page.
@@ -52,7 +52,7 @@ class AguilaBeerPerBeerTrivia extends ControllerBase {
     }
 
     return [
-      '#theme' => 'aguila_beer_per_beer_trivia',
+      '#theme' => 'aguila_beer_per_view_trivia',
       '#content' => $results,
     ];
 

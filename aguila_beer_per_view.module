@@ -29,7 +29,7 @@ function aguila_beer_per_view_help($route_name, RouteMatchInterface $route_match
  */
 function aguila_beer_per_view_theme($existing, $type, $theme, $path) {
   return [
-    'aguila_beer_per_beer_trivia' => [
+    'aguila_beer_per_view_trivia' => [
       'variables' => [
         'content' => NULL,
       ],
