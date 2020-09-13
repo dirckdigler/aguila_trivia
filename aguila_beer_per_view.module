@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains aguila_beer_per_view.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function aguila_beer_per_view_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the aguila_beer_per_view module.
+    case 'help.page.aguila_beer_per_view':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function aguila_beer_per_view_theme($existing, $type, $theme, $path) {
+  return [
+    'aguila_beer_per_beer_trivia' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+    ],
+  ];
+}

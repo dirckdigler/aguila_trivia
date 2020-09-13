@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation for aguila_beer_per_beer_trivia.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.element'.
+ *
+ * @see template_preprocess_template_directory()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="aguila-beer-per-beer-trivia">
+  {% if content.counter %}
+    <div>{{ 'pregunta'|upper }} </div>
+    <div>{{ content.counter }}</div>
+  {% endif %}
+  {% if content.question %}
+    <div class="question">{{ content.question }}</div>
+  {% endif %}
+  {% if content.multiple_options %}
+    {% for option in content.multiple_options %}
+      <div class="option">{{ option }}</div>
+    {% endfor %}
+  {% endif %}
+  <button class="btn next-question">{{ 'siguiente'|upper }}</button>
+</div>
+    
+    
+    
+    

@@ -1,0 +1,5 @@
+name: 'Aguila - Beer Per View'
+type: module
+description: 'Quizz to score points'
+core: 8.x
+package: 'Custom'
