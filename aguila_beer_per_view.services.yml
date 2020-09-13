@@ -1,0 +1,4 @@
+services:
+  aguila_beer_per_view.storage_trivia:
+    class: Drupal\aguila_beer_per_view\Service\AguilaBeerPerViewGetStorage
+    arguments: ['@entity_type.manager']

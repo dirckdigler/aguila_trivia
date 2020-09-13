@@ -14,7 +14,7 @@
 #}
 <div class="aguila-beer-per-beer-trivia">
   {% if content.counter %}
-    <div>{{ 'pregunta'|upper }} </div>
+    <div>{{ 'pregunta'|upper }}</div>
     <div>{{ content.counter }}</div>
   {% endif %}
   {% if content.question %}
@@ -22,12 +22,12 @@
   {% endif %}
   {% if content.multiple_options %}
     {% for option in content.multiple_options %}
-      <a href="{{ content.url }}">
+      <a class="beer-per-view-ajax-on-progress" href="{{ content.url }}{{ option }}">
         <div class="option">{{ option }}</div>
       </a>
     {% endfor %}
   {% endif %}
-  <button class="btn next-question">{{ 'siguiente'|upper }}</button>
+  <button class="btn  beer-per-view-ajax-on-progress">{{ 'siguiente'|upper }}</button>
 </div>
     
     

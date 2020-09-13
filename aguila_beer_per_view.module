@@ -41,5 +41,5 @@ function aguila_beer_per_view_theme($existing, $type, $theme, $path) {
  * Implements hook_page_attachments().
  */
 function aguila_beer_per_view_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'aguila_beer_per_view/aguila-beer-per-view';
+  $attachments['#attached']['library'][] = 'aguila_beer_per_view/aguila_beer_per_view';
 }
