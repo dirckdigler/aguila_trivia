@@ -76,4 +76,26 @@ class AguilaBeerPerViewGetStorage {
     return $results;
   }
 
+  /**
+   * Validate the match between option selected by the user
+   * and array with the correct answer.
+   *
+   * @param string $option
+   *
+   * @return bool
+   * 
+   */
+  public function qualify_trivia($option) {
+    // WIP - it's necessary elaborate the trivia id dinamically
+    // and set as a parameter.
+    $result = $this->build(3);
+    $get_option_key = array_search($option, $result['multiple_options']);
+    if ($get_option_key == $result['correct_answers']) {
+      return TRUE;
+    }
+    else {
+      return FALSE;
+    }
+  }
+
 }

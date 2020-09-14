@@ -22,7 +22,7 @@
   {% endif %}
   {% if content.multiple_options %}
     {% for option in content.multiple_options %}
-      <a class="beer-per-view-ajax-on-progress" href="{{ content.url }}{{ option }}">
+      <a class="use-ajax beer-per-view-ajax-on-progress" href="{{ content.url }}{{ option }}">
         <div class="option">{{ option }}</div>
       </a>
     {% endfor %}
